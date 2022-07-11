@@ -39,12 +39,14 @@ use yaml file containing variables: robot --variablefile my_variables.yaml tests
 
 **Set dry-run mode**
 
-3execute dryrun mode to execute a first round of code validation : robot --dryrun tests/ [change code live to make dryrun failing]
-Failing:
-Using keywords that are not found.
-Using keywords with wrong number of arguments.
-Using user keywords that have invalid syntax.
-When test library or resource file imports cannot be resolved
+*Keyword are not really executed. Tests under dryrun mode fail when:*<br>
+- *Using keywords that are not found*<br>
+- *Using keywords with wrong number of arguments*.<br>
+- *Using user keywords that have invalid syntax*<br>
+- *When test library or resource file imports cannot be resolved*<br>
+
+13. execute dryrun mode to execute a first round of code validation : robot --dryrun tests/
+
 
 **Force exit status to 0**
 
