@@ -6,7 +6,7 @@ Suite Teardown     Close All Browsers
 *** Test Cases ***
 Verify Browser Opens
     [Tags]    T1    Smoke
-    Log     Hello World from the very first Suite!!!!
+    Log     Opening a browser page...
     Open Website    url=https://www.google.com
     Sleep    5s
 

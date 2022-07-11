@@ -15,6 +15,9 @@ Debug Code Using Different LogLevels
     ...                 1) robot --name HelloSuite tests/01_First_Suite/Hello.robot
     ...                 2) robot --name HelloSuite --loglevel DEBUG tests/01_First_Suite/Hello.robot
     ...                 3) robot --name HelloSuite --loglevel TRACE tests/01_First_Suite/Hello.robot
+    [Tags]     Smoke
+    ...        KnownIssue
+    ...        T50
     Log     This is a failing test case!!
     ${sentences}=     Text To Sentences    text=${TEXT}
 
