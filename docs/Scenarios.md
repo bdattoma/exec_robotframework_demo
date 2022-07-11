@@ -59,4 +59,5 @@ use yaml file containing variables: robot --variablefile my_variables.yaml tests
 **Run scripts before executing "robot"**
 
 *Pre-run modifiers should be implemented as [visitors](https://robot-framework.readthedocs.io/en/master/autodoc/robot.model.html#module-robot.model.visitor) that can traverse through the executable test suite structure and modify it as needed*
-15. Customize suites before running robot command using --prerunmodifier option: robot --prerunmodifier resources/utils/SplitSuite.py:2:1:1 tests/
+
+15. Split suites into chunks before running robot command using --prerunmodifier option: robot --prerunmodifier resources/utils/SplitSuite.py:2:1:1 tests/
