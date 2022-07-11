@@ -1,0 +1,9 @@
+--variable USER_ROLE:Captain
+--variable USERNAME:jsparrow
+--variablefile my_variables.yaml
+--include Smoke
+--exclude T10
+--exclude T50
+--exclude T1
+
+tests/
