@@ -29,16 +29,17 @@ robot -i Smoke -e KnownIssue tests
 
 **Set Variables**
 
-*if we set the same variable using different methods, this is the precedence order: "-v command" > variable file > variable section of robot 
-set a variable while running the robot command:  robot -v USER_ROLE:Salesman tests/01__First_Suite/Hi.robot
+*if we set the same variable using different methods, this is the precedence order: "-v command" > variable file > variable section of robot*
+
+11. set a variable while running the robot command:  robot -v USER_ROLE:Salesman tests/01__First_Suite/Hi.robot
 use yaml file containing variables: robot --variablefile my_variables.yaml tests/01__First_Suite/Hi.robot*
 
 **Set arguments file**<br>
-13. use argument file for setting the options: robot -A my_arguments.txt 
+12. use argument file for setting the options: robot -A my_arguments.txt 
 
 **Set dry-run mode**
 
-14. execute dryrun mode to execute a first round of code validation : robot --dryrun tests/ [change code live to make dryrun failing]
+3execute dryrun mode to execute a first round of code validation : robot --dryrun tests/ [change code live to make dryrun failing]
 Failing:
 Using keywords that are not found.
 Using keywords with wrong number of arguments.
@@ -47,7 +48,7 @@ When test library or resource file imports cannot be resolved
 
 **Force exit status to 0**
 
-15. force the exit status code to 0 using --nostatusrc command: <br>
+14. force the exit status code to 0 using --nostatusrc command: <br>
 	a. robot -i Smoke  tests/
 	b. echo $? (to check the exit status
 	c. robot -i Smoke --nostatusrc tests/
@@ -56,4 +57,4 @@ When test library or resource file imports cannot be resolved
 **Run scripts before executing "robot"**
 
 *Pre-run modifiers should be implemented as [visitors](https://robot-framework.readthedocs.io/en/master/autodoc/robot.model.html#module-robot.model.visitor) that can traverse through the executable test suite structure and modify it as needed*
-16. Customize suites before running robot command using --prerunmodifier option: robot --prerunmodifier resources/utils/SplitSuite.py:2:1:1 tests/
+15. Customize suites before running robot command using --prerunmodifier option: robot --prerunmodifier resources/utils/SplitSuite.py:2:1:1 tests/
