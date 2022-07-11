@@ -1,4 +1,4 @@
-**Basic usage**
+**Basic usage**<br>
 1. run one specific robot file:  robot tests/01__First_Suite/Browser.robot
 2. run all the robot files from a directory: 
  robot tests/01__First_Suite
@@ -9,7 +9,7 @@
 	a. run alphabetical order: robot tests/ and look at log.html
 	b. Run specifying order: robot tests/02Second_Suite/Hi.robot tests/01First_Suite/Browser.robot tests/03Third_Suite/Report.robot tests/01First_Suite/Hi.robot and look at log.html
 
-**Test selection**
+**Test selection**<br>
 5. run test cases matching a tag using "include" option:    
 	a. full match: robot --include Smoke tests / robot -i Smoke tests
 	b. partial match: robot -i T*  tests/
@@ -30,10 +30,10 @@ robot -i Smoke -e KnownIssue tests
 set a variable while running the robot command:  robot -v USER_ROLE:Salesman tests/01__First_Suite/Hi.robot
 use yaml file containing variables: robot --variablefile my_variables.yaml tests/01__First_Suite/Hi.robot*
 
-**Set arguments file**
+**Set arguments file**<br>
 13. use argument file for setting the options: robot -A my_arguments.txt 
 
-**Set dry-run mode**
+**Set dry-run mode**<br>
 14. execute dryrun mode to execute a first round of code validation : robot --dryrun tests/ [change code live to make dryrun failing]
 Failing:
 Using keywords that are not found.
@@ -41,7 +41,7 @@ Using keywords with wrong number of arguments.
 Using user keywords that have invalid syntax.
 When test library or resource file imports cannot be resolved
 
-**Force exit status to 0**
+**Force exit status to 0**<br>
 15. force the exit status code to 0 using --nostatusrc command
 	a. robot -i Smoke  tests/
 	b. echo $? (to check the exit status
