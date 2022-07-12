@@ -66,17 +66,17 @@ use yaml file containing variables: robot --variablefile my_variables.yaml tests
 
 **Result Reporting**
 
-17. select output dir plus all the output files: <br>
+16. select output dir plus all the output files: <br>
     robot --outputdir Results --output output.xml --log logs.html --report report.html --xunit output_xunit.xml --debugfile debug.txt tests/03__Third_Suite/
-18. combine:<br>
+17. combine:<br>
     a.  robot --output browser.xml --log browser_logs.html --report browser_report.html tests/01__First_Suite/Browser.robot<br>
     b.  robot --output report.xml --log report_logs.html --report report_report.html tests/03__Third_Suite/Report.robot <br>
     c.  rebot --name "Final Suite" --report final_report.html --log final_logs.html --output final_output.xml  browser.xml report.xml<br>
-19. merge:<br>
+18. merge:<br>
     a.  robot --output first.xml -i T51 tests/03__Third_Suite/Report.robot<br>
     b.  robot --output second.xml -i T51 tests/03__Third_Suite/Report.robot <br>
     c.  rebot --merge --output fixed.xml --log fixed.html first.xml second.xml <br>
-20. use differnt log level for debugging purposes:<br>
+19. use differnt log level for debugging purposes:<br>
     a.  robot --name HelloSuite tests/03__Third_Suite/Report.robot<br>
     b.  robot --name HelloSuite --loglevel DEBUG tests/03__Third_Suite/Report.robot<br>
     c.  robot --name HelloSuite --loglevel TRACE tests/03__Third_Suite/Report.robot<br>
