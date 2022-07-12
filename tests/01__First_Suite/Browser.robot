@@ -11,9 +11,6 @@ Verify Browser Opens
     Sleep    5s
 
 
-# rebot --name Greetings --report Greetings.html --log Greetings_logs.html --output Results_dir/greetings.xml Results_dir/hello.xml Results_dir/hi.xml
-
-
 *** Keywords ***
 Open Website
     [Arguments]    ${url}
