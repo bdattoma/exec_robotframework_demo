@@ -34,7 +34,8 @@ robot -i Smoke -e KnownIssue tests
 11. set a variable while running the robot command:  robot -v USER_ROLE:Salesman tests/01__First_Suite/Hi.robot
 use yaml file containing variables: robot --variablefile my_variables.yaml tests/01__First_Suite/Hi.robot*
 
-**Set arguments file**<br>
+**Set arguments file**
+
 12. use argument file for setting the options: robot -A my_arguments.txt 
 
 **Set dry-run mode**
@@ -63,18 +64,19 @@ use yaml file containing variables: robot --variablefile my_variables.yaml tests
 15. Split suites into chunks before running robot command using --prerunmodifier option: robot --prerunmodifier resources/utils/SplitSuite.py:2:1:1 tests/
 
 
-*Result Reporting*
+**Result Reporting**
+
 17. select output dir plus all the output files: <br>
     robot --outputdir Results --output output.xml --log logs.html --report report.html --xunit output_xunit.xml --debugfile debug.txt tests/03__Third_Suite/
 18. combine:<br>
-    a. robot --output browser.xml --log browser_logs.html --report browser_report.html tests/01__First_Suite/Browser.robot<br>
-    b. robot --output report.xml --log report_logs.html --report report_report.html tests/03__Third_Suite/Report.robot <br>
-    c. rebot --name "Final Suite" --report final_report.html --log final_logs.html --output final_output.xml  browser.xml report.xml<br>
+    a.  robot --output browser.xml --log browser_logs.html --report browser_report.html tests/01__First_Suite/Browser.robot<br>
+    b.  robot --output report.xml --log report_logs.html --report report_report.html tests/03__Third_Suite/Report.robot <br>
+    c.  rebot --name "Final Suite" --report final_report.html --log final_logs.html --output final_output.xml  browser.xml report.xml<br>
 19. merge:<br>
-    a. robot --output first.xml -i T51 tests/03__Third_Suite/Report.robot<br>
-    b. robot --output second.xml -i T51 tests/03__Third_Suite/Report.robot <br>
-    c. rebot --merge --output fixed.xml --log fixed.html first.xml second.xml <br>
+    a.  robot --output first.xml -i T51 tests/03__Third_Suite/Report.robot<br>
+    b.  robot --output second.xml -i T51 tests/03__Third_Suite/Report.robot <br>
+    c.  rebot --merge --output fixed.xml --log fixed.html first.xml second.xml <br>
 20. use differnt log level for debugging purposes:<br>
-    a. robot --name HelloSuite tests/03__Third_Suite/Report.robot<br>
-    b. robot --name HelloSuite --loglevel DEBUG tests/03__Third_Suite/Report.robot<br>
-    c. robot --name HelloSuite --loglevel TRACE tests/03__Third_Suite/Report.robot<br>
+    a.  robot --name HelloSuite tests/03__Third_Suite/Report.robot<br>
+    b.  robot --name HelloSuite --loglevel DEBUG tests/03__Third_Suite/Report.robot<br>
+    c.  robot --name HelloSuite --loglevel TRACE tests/03__Third_Suite/Report.robot<br>
