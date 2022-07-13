@@ -13,9 +13,9 @@ ${TEXT}=     Text to split into tokens
 Debug Code Using Different LogLevels
     [Documentation]     Example TC to show differences in HTML report using different log levels.
     ...                 Use these 3 different commands to see the differences:
-    ...                 1) robot --name HelloSuite tests/03_Third_Suite/Report.robot
-    ...                 2) robot --name HelloSuite --loglevel DEBUG tests/03_Third_Suite/Report.robot
-    ...                 3) robot --name HelloSuite --loglevel TRACE tests/03_Third_Suite/Report.robot
+    ...                 1) robot --name HelloSuite tests/03__Third_Suite/Report.robot
+    ...                 2) robot --name HelloSuite --loglevel DEBUG tests/03__Third_Suite/Report.robot
+    ...                 3) robot --name HelloSuite --loglevel TRACE tests/03__Third_Suite/Report.robot
     [Tags]     Smoke
     ...        KnownIssue
     ...        T50
