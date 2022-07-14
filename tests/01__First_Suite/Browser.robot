@@ -8,7 +8,7 @@ Verify Browser Opens
     [Tags]    T1    Smoke
     Log     Opening a browser page...
     Open Website    url=https://www.google.com
-    Sleep    3s
+    Sleep    1s
 
 
 *** Keywords ***
